@@ -1,0 +1,23 @@
+
+<div class="btn btn-group" >
+        <a  (click) = 'callAll()'><button type="button" class="btn btn-outline-dark btn-md">All</button></a> &nbsp;&nbsp;&nbsp;&nbsp;
+        <a  (click) = 'callTrue()'><button type="button" class="btn btn-outline-dark btn-md">Done</button></a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a  (click) = 'callFalse()'><button type="button" class="btn btn-outline-dark btn-md">Not done</button></a>
+</div>
+
+<table  class="table table-striped table-hover col-sm-10" align="center">
+
+    <tbody>
+        <tr *ngFor="let eachToDo of todoList" scope="row">
+            <th scope="row">{{eachToDo.title}}</th>
+            <td>
+                <div *ngIf="eachToDo.completed ===false" class="btn btn-danger">
+                    {{eachToDo.completed}}
+                </div>
+                <div *ngIf="eachToDo.completed ===true" class="btn btn-success">
+                    {{eachToDo.completed }}
+                </div>
+            </td>
+          </tr>
+    </tbody>
+</table>

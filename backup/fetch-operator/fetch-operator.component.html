@@ -1,0 +1,16 @@
+
+<button (click) = 'send()' class="btn btn-info">Search</button>
+<table>
+    <tr class="table table-dark">
+        <th>Title</th>
+        <th>Status</th> 
+    </tr>
+    <tr *ngFor="let eachTodo of todoList ">
+        <td>{{eachTodo.title}}</td>
+        <td>{{eachTodo.completed}}</td>
+    </tr>
+</table>
+<br><br>
+
+
+ <!--  | jsonTransform : 'title' : this.srchText  -->  
